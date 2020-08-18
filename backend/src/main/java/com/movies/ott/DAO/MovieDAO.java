@@ -15,4 +15,6 @@ public interface MovieDAO {
 	public Movies getMovie(int id);
 	
 	public List<Movies> getAllMovies();
+
+	public List<Movies> getMoviesByKeyword(String string);
 }

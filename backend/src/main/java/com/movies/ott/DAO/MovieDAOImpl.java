@@ -74,6 +74,18 @@ public class MovieDAOImpl implements MovieDAO {
 		return q.getResultList();
 	}
 
+	@Override
+	public List<Movies> getMoviesByKeyword(String word) {
+		
+		Session session=entityManager.unwrap(Session.class);
+		
+		word=word.toLowerCase();
+		Query<Movies> q=session.createQuery("from Movies where LOWER(plot) LIKE '% "+word+" %'");
+		List<Movies> l=q.getResultList();
+		
+		return l;
+	}
+
 }
 
 

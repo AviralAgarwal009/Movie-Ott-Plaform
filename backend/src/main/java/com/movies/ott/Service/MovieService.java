@@ -15,5 +15,7 @@ public interface MovieService {
 	public List<Movies> getHistory(String username);//returns movie list or null
 	
 	public List<Movies> getAllMovies();
+	
+	public List<Movies> getRecommendedMovies(String username);
 
 }

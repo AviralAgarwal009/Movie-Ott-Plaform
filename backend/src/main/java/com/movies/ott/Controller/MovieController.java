@@ -67,6 +67,15 @@ public class MovieController {
 	}
 	
 	
+	@GetMapping("/movies/recommend")
+	private @ResponseBody List<Movies> getRecommendedMovies(@RequestParam("username")String username){
+		
+		return movieService.getRecommendedMovies(username);
+		
+		
+	}
+	
+	
 	
 	@PutMapping("/movies/watched")
 	private @ResponseBody String addToUsersWatchHistory(@RequestParam("username")String username,@RequestParam("movieId") int id) {
