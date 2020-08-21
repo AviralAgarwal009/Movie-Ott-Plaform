@@ -314,7 +314,7 @@ public class MovieServiceImpl implements MovieService {
 			float result=(float) (nom/(value1*value2));
 			resultSet.put(m2, result);	
 			c++;
-			System.out.println(result+" "+c);
+			System.out.println(result+" "+c +"  "+m2.getTitle());
 			
 		}
 		
